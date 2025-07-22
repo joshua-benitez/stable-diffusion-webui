@@ -1,3 +1,10 @@
+import os
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+
+os.environ["COMMANDLINE_ARGS"] = "--skip-torch-cuda-test"
+
 from modules import launch_utils
 
 args = launch_utils.args
